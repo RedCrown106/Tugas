@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keluhan Siswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="btn-dark" onclick="gantiMode()">🌙</button>
+
+  <div class="halaman">
+
+    <header>
+      <h1>📣 Keluhan Siswa</h1>
+      <p>SMK Merdeka — Suaramu Penting!</p>
+    </header>
+
+    <div class="kartu">
+      <h2>Sampaikan Keluhanmu</h2>
+
+      <label>Nama</label>
+      <input id="nama" placeholder="Masukkan Nama">
+
+      <label>Kelas</label>
+      <select id="kelas">
+        <option value="">-- Pilih Kelas --</option>
+        <option>X RPL 1</option>
+        <option>X RPL 2</option>
+        <option>XI RPL 1</option>
+        <option>XI RPL 2</option>
+        <option>XII RPL 1</option>
+        <option>XII RPL 2</option>
+      </select>
+
+      <label>Keluhan / Saran</label>
+      <textarea id="pesan" placeholder="Tulis keluhanmu di sini..."></textarea>
+
+      <button class="btn-kirim" onclick="kirim()">Kirim </button>
+    </div>
+
+    <div class="kartu" id="kartuDaftar" style="display:none">
+      <h2>Keluhan Masuk</h2>
+      <div id="daftarKeluhan"></div>
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

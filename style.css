@@ -1,0 +1,148 @@
+/* CSS Variables untuk tema warna — dark mode cukup ubah nilai di sini */
+:root {
+  --bg: #F5F5F0;
+  --kartu: #FFFFFF;
+  --teks: #1A1A1A;
+  --teks-redup: #6B6B6B;
+  --border: #E0DDD5;
+  --oranye: #E87F24;
+}
+
+body.dark {
+  --bg: #1A1A1A;
+  --kartu: #252525;
+  --teks: #F0EDE6;
+  --teks-redup: #A0A0A0;
+  --border: #383838;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--teks);
+  transition: background 0.3s, color 0.3s;
+  padding: 20px;
+}
+
+/* Tombol dark mode — pojok kanan atas, selalu kelihatan */
+.btn-dark {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--kartu);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.halaman {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 26px;
+  color: var(--oranye);
+  margin-bottom: 4px;
+}
+
+header p {
+  color: var(--teks-redup);
+  font-size: 14px;
+}
+
+/* Kartu putih tempat form dan daftar keluhan */
+.kartu {
+  background: var(--kartu);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.kartu h2 {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+/* Label dan input dalam satu grup — label di atas, input di bawah */
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--teks-redup);
+  margin: 14px 0 5px;
+  text-transform: uppercase;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--kartu);
+  color: var(--teks);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--oranye); /* Garis oranye saat input aktif */
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.btn-kirim {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  background: var(--oranye);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-kirim:hover {
+  background: #D06B18;
+}
+
+/* Setiap item keluhan di daftar */
+.item-keluhan {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.item-keluhan strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.item-keluhan span {
+  font-size: 12px;
+  color: var(--teks-redup);
+}
